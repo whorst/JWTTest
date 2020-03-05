@@ -1,0 +1,62 @@
+plugins {
+    id 'org.springframework.boot' version '2.2.1.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id 'java'
+}
+
+group = 'com.JWTTest'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-hateoas'
+    implementation 'org.springframework.boot:spring-boot-starter-jersey'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-web-services'
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    implementation 'org.springframework.data:spring-data-rest-hal-browser'
+    implementation 'org.springframework.session:spring-session-core'
+
+    //Adding the below dependency to the class path means that the sign in form gets auto generated. It adds a filter
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    implementation 'org.springframework.security:spring-security-test'
+    compile group: 'org.springframework.security', name: 'spring-security-config', version: '5.2.1.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.2.1.RELEASE'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.15'
+
+
+
+
+    compileOnly 'org.projectlombok:lombok'
+
+//    compile("org.springframework.cloud:spring-cloud-starter-feign:1.4.0.RELEASE")
+//    compile("io.github.openfeign:feign-bom:10.2.3")
+//    compile("io.github.openfeign:feign-core:10.7.2")
+//    compile("io.github.openfeign:feign-okhttp:10.7.2")
+//    compile("io.github.openfeign:feign-gson:10.7.2")
+//    compile("io.github.openfeign:feign-slf4j:10.7.2")
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+    compile("org.springframework.boot:spring-boot-devtools")
+//    compile("org.springframework.cloud:spring-cloud-starter-parent:1.0.0.RELEASE")
+
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+    testImplementation 'io.projectreactor:reactor-test'
+
+    implementation 'org.springframework.boot:spring-boot-starter-cache'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+}
+test {
+    useJUnitPlatform()
+}

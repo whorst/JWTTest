@@ -1,0 +1,56 @@
+https://www.youtube.com/watch?v=I0poT4UxFxE&list=PLqq-6Pq4lTTYTEooakHchTGglSvkZAjnE&index=2
+-Authentication
+    -Knowledge Based Authentication
+        -UserID
+        -Password
+        -A security question
+        -This authentication is based on knowledge
+    -Possession Based Authentication
+        -Sending a text message to your phone
+    -Multifactor
+        -A mix of the two
+
+-Authorization
+    -Can this user do what they are trying to do?
+    -You need authentication first
+
+-Principal
+    -The person you have identified through the process of authentication
+    -The currently logged in user
+
+-Granted Authority
+    -Like a permissions from FCS
+
+-Filters
+    -Will filter a request to an endpoint to check for authentication
+    -servlet - provides a response to a particular request
+    - The classpath security filter adds mandatory authentication for all urls
+
+-Going to application.properties allows you to change the username and password as seen here
+    https://www.youtube.com/watch?v=PhG5p_yv0zs&list=PLqq-6Pq4lTTYTEooakHchTGglSvkZAjnE&index=3
+    -at 9:02
+
+https://www.youtube.com/watch?v=iyXne7dIn7U&list=PLqq-6Pq4lTTYTEooakHchTGglSvkZAjnE&index=4 - Video 4
+    -The authentication manages app authentication
+    -The AuthenticationManagerBuilder class can be extended and the configure method overridden to allow for our own auth
+    configuration
+    -Password Encoding - will hash your password for you
+
+https://www.youtube.com/watch?v=payxWrmF_0k&list=PLqq-6Pq4lTTYTEooakHchTGglSvkZAjnE&index=5 - Video 5
+    -
+
+https://www.youtube.com/watch?v=caCJAJC41Rk&list=PLqq-6Pq4lTTYTEooakHchTGglSvkZAjnE&index=6 - Video 6
+    -Come back later
+
+https://www.youtube.com/watch?v=LKvrFltAgCQ&list=PLqq-6Pq4lTTYTEooakHchTGglSvkZAjnE&index=7
+    - Spring Boot -> Spring Security -> JPA -> MySQL for authentication
+    - Check if user is in DB and if the Credentials are correct
+    - Using MySql Create a DB called springsecurity and a table called user.
+
+https://www.youtube.com/watch?v=TNt3GHuayXs&list=PLqq-6Pq4lTTYTEooakHchTGglSvkZAjnE&index=8
+    - The columns will be username, password, active (if the user is active), and roles (column separated list of roles)
+    - https://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/?fbclid=IwAR2esmMcw8OmpMNXzqfKXX2zBTjhOx2XwOV2gbTPKpqnvtt7T_ZDD9p9KCQ#user-schema
+        - Our schema
+    - https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-commands.html
+        -To start DB
+        -https://stackoverflow.com/questions/17426052/error-2003-hy000-cant-connect-to-mysql-server-on-localhost-10061
