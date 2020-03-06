@@ -54,3 +54,32 @@ https://www.youtube.com/watch?v=TNt3GHuayXs&list=PLqq-6Pq4lTTYTEooakHchTGglSvkZA
     - https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-commands.html
         -To start DB
         -https://stackoverflow.com/questions/17426052/error-2003-hy000-cant-connect-to-mysql-server-on-localhost-10061
+
+https://www.youtube.com/watch?v=soGRyl9ztjI&list=PLqq-6Pq4lTTYTEooakHchTGglSvkZAjnE&index=10
+    - JWT Tutorial
+        - JWTs tells the server WHO you are
+        - Tokens help web apps remember sessions
+        - Session Tokens
+            - When you authenticate, the server creates a session ID and keeps a hold of it
+            - Session ID is saved in a cookie, commonly
+            - Disadvantages of session ID:
+                - This approach assumes there's only one monolithic server (not a load balancer)
+                - Multiple servers makes it so there are multiple places that would have not in sync session IDs
+                - One Solution is to save session IDs in a shared Redis Cache
+                - Another solution is to have the load balancer remember the server that the session ID is stored
+        - With JWT
+            - When the client authenticates, the user info is returned as a token
+            - The client sends the token with the request
+            - When a user authenticates, the server signs the JWT.
+
+https://www.youtube.com/watch?v=_XbXkVdoG_0&list=PLqq-6Pq4lTTYTEooakHchTGglSvkZAjnE&index=11
+    - What does a JWT Look Like?
+        - The Header, the payload, the signature
+        - The point of JWT is to send something from the Server to the client so that the client can send it back upon request
+        - It's the server saying "I've authenticated you, so send me this token back every time you make a request so I know who you are"
+        - The header and the signature are what is unique to the user, it's what handles the who of the user (starting at 5:15 in the video)
+        - The Base64 Encoding of the Header and payload is done out of convenience
+        - When somebody authenticates, the server signs/creates the signature in a way that only the server can calculate
+        - The "your-256-bit-secret" part of the signature helps the encoding/decoding, known as a cryptographic hash
+        - End at 10:20
+

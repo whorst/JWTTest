@@ -18,7 +18,6 @@ public class HomeResource {
 
     @GetMapping("/")
     public String home() {
-        System.out.println("<<<<<<<<<<<<<<<<<" +userRepository.findAll().get(1));
         return ("<h1>Welcome</h1>");
     }
 

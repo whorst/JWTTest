@@ -1,10 +1,10 @@
-INSERT INTO user (username, password, enabled)
+INSERT INTO users (username, password, enabled)
     values(
         'user',
         'pass',
         true);
 
-INSERT INTO user (username, password, enabled)
+INSERT INTO users (username, password, enabled)
     values(
         'admin',
         'pass',
