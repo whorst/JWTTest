@@ -25,8 +25,8 @@ dependencies {
     //Adding the below dependency to the class path means that the sign in form gets auto generated. It adds a filter
     implementation 'org.springframework.boot:spring-boot-starter-security'
 
-    implementation 'org.springframework.security:spring-security-test'
-    compile group: 'org.springframework.security', name: 'spring-security-config', version: '5.2.1.RELEASE'
+//    implementation 'org.springframework.security:spring-security-test'
+//    compile group: 'org.springframework.security', name: 'spring-security-config', version: '5.2.1.RELEASE'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.2.1.RELEASE'
     compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.15'
 
@@ -45,6 +45,10 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-thymeleaf")
     compile("org.springframework.boot:spring-boot-devtools")
 //    compile("org.springframework.cloud:spring-cloud-starter-parent:1.0.0.RELEASE")
+
+    compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.2'
+    compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.2.4'
+
 
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
     annotationProcessor 'org.projectlombok:lombok'

@@ -99,3 +99,6 @@ https://www.youtube.com/watch?v=_XbXkVdoG_0&list=PLqq-6Pq4lTTYTEooakHchTGglSvkZA
         - JWTs can expire by payloads
         - JWTs can also be blacklisted
 
+Here is what resolved the authentication issue: https://stackoverflow.com/questions/54254901/why-spring-is-not-recognizing-my-websecurityconfigureradapter-with-basicauth
+And here is my stack overflow question: https://stackoverflow.com/questions/60581245/springboot-userdetailsservice-loaduserbyusername-method-never-called-with-custom
+
