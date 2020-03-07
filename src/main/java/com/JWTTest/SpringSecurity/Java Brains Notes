@@ -81,5 +81,21 @@ https://www.youtube.com/watch?v=_XbXkVdoG_0&list=PLqq-6Pq4lTTYTEooakHchTGglSvkZA
         - The Base64 Encoding of the Header and payload is done out of convenience
         - When somebody authenticates, the server signs/creates the signature in a way that only the server can calculate
         - The "your-256-bit-secret" part of the signature helps the encoding/decoding, known as a cryptographic hash
-        - End at 10:20
+        - JWT is specific to authorization
+        - The JWT is either stored on the local storage or in a cookie
+        - JWT is passed in the HTTP Header.
+            - Because the Header is a key/value pair, JWT has a standard for being passed. It looks like:
+                Authorization: Bearer ~JWT Value~
+
+        The Steps for JWT Authentication:
+            1) Send the userId/Password to the server
+            2) The server Authenticates
+            3) The server generated the JWT
+            4) Send the JWT to the client
+            5) The client will save it in a cookie or local storage
+            6) To pass the info back to the server, put the JWT in a header called authorization: Bearer ~jwt~
+        - JWT Transmission has to happen in a HTTPS Connection
+        - OAuth authenticates/authorizes users
+        - JWTs can expire by payloads
+        - JWTs can also be blacklisted
 
